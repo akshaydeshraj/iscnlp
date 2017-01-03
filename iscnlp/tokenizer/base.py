@@ -9,16 +9,15 @@ import string
 
 
 class BaseTokenizer(object):
-
     def __init__(self, split_sen=False):
         self.split_sen = split_sen
         file_path = os.path.dirname(os.path.abspath(__file__))
         # Internet Domains (most frequent ones)
-        with open('%s/data/DOMAINS' % file_path) as fp:
+        with open('%s/data/DOMAINS' % file_path, encoding='utf-8') as fp:
             self.domains = fp.read().split()
         # List of Emoticons
         with open('%s/data/EMOTICONS' % file_path) as fp:
-            self.emoticons = set(fp.read(encoding='utf-8').split())
+            self.emoticons = set(fp.read().split())
         # List of Non-breaking Prefixes
         with open('%s/data/NONBREAKING_PREFIXES' % file_path) as fp:
             self.NBP = set(fp.read().split())
@@ -26,8 +25,8 @@ class BaseTokenizer(object):
         self.NBP_NUM = set(['No', 'no', 'Art', 'pp'])
         self.contractions = """ 'all 'am 'clock 'd 'll 'm n't
                             're 's 'sup 'tis 'twas 've 'n' """
-        self.contractions = self.contractions.split() +\
-            self.contractions.upper().split()
+        self.contractions = self.contractions.split() + \
+                            self.contractions.upper().split()
         # precompile regexes
         self.base_fit()
 
@@ -154,7 +153,7 @@ class BaseTokenizer(object):
                 continue
             is_url = False
             if (token.startswith('http://') or
-                token.startswith('https://') or
+                    token.startswith('https://') or
                     token.startswith('www.')):
                 is_url = True
             elif self.isurl(token):
@@ -185,10 +184,10 @@ class BaseTokenizer(object):
                 if dotless.isdigit():
                     word = dotless + ' .'
                 elif (('.' in dotless and re.search('[a-zA-Z]', dotless)) or
-                        dotless in self.NBP):
+                              dotless in self.NBP):
                     pass
                 elif (dotless in self.NBP_NUM and
-                      (i < text_len and words[i + 1][0].isdigit())):
+                          (i < text_len and words[i + 1][0].isdigit())):
                     pass
                 elif i < text_len and words[i + 1][0].isdigit():
                     pass
