@@ -18,7 +18,7 @@ class BaseTokenizer(object):
             self.domains = fp.read().split()
         # List of Emoticons
         with open('%s/data/EMOTICONS' % file_path) as fp:
-            self.emoticons = set(fp.read().split())
+            self.emoticons = set(fp.read(encoding='utf-8').split())
         # List of Non-breaking Prefixes
         with open('%s/data/NONBREAKING_PREFIXES' % file_path) as fp:
             self.NBP = set(fp.read().split())

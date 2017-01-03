@@ -1,0 +1,102 @@
+CHANGES
+=======
+
+* Join tokenized sentences if tokenizer called from CLI
+* filter empty sentences
+* Updated Tokenizer for tokenizing social media data like twitter, fb etc
+* follow pep8 style guidelines
+* Updated Tokenizer for tokenizing social media data like twitter, fb etc
+* added a flag for tokenizing tweets
+* updated sentence splitting patterns for Urdu
+* updated few tokenization patterns (urls, non-breaking prefixes etc.)
+* added special cases for tweets
+* updated the list
+* handle text differently (whether called from console or from python directly)
+* non-breaking prefixes for Spanish
+* list of most frequent internet domains to identify urls
+* Update README.rst
+* merged `git fetch` and `git checkout` to `git pull`
+* added commands to install `git-lfs`
+* configured travis to pull big files using git-lfs
+* install git lfs and pull large files from text pointers
+* updated emoticon list
+* filter site-urls for tokenization
+* handle UnicodeDecodeError for multi-encoded files
+* added parser and POS-tagger for Urdu
+* Urdu Neural-Network POS-tagger model
+* Urdu Neural-Network parser model
+* Urdu POS embeddings
+* Urdu word embeddings
+* Urdu suffix embeddings
+* Urdu prefix embeddings
+* added POS-tagger for Urdu
+* fixed a bug (parent -> pparent)
+* fixed a typo (depenency -> dependency)
+* inplace RelU activation
+* added parser for Urdu
+* `projectivize` is only required for training
+* converted beam-item from class instance to tuple
+* test case for Hindi CLI file processing
+* test CLI file processing
+* test beam-parser
+* added parser usage instructions
+* added test cases for Hindi parser
+* base features for neural network-based parsing
+* pseudo-projective transformation for parsing non-projective structures
+* parser with greedy and non-greedy (beamsearch) decoding
+* arc-eager parsing algorithm
+* added parser for Hindi
+* neural-network parser model for Hindi
+* Hindi POS embeddings (created using `gensim`)
+* added command-line-interface calls for pos-tagger and parser
+* variable name change
+* parse raw files directly from command-line-interface
+* skip wx-conversion if already in `wx`
+* pos-tag raw files directly from command-line-interface
+* fixed a bug (wrong suffix generation)
+* make `WordVec` available for other modules
+* mask Roman strings in Indic scripts while `utf2wx` conversion
+* allow cyclometric-complexity upto 15
+* CircleCI build passed
+* installing git-lfs
+* added travis and coveralls badges
+* added tests for wx-converter
+* test command line argument file processing
+* refactored code to test commant line argument file processing
+* fixed a typo in docstring
+* removed `build_ext` (nothing to build)
+* added tests for Hindi POS-tagger
+* fixed a bug (set GIT_LFS variable)
+* added script to install `git-lfs`
+* removed lfs install from here
+* configured travis to pull big files using git-lfs
+* download big-files from text-pointers on travis
+* install git-lfs to download large files
+* fixed a typo
+* run `wget` and `tar` in sepearte commands
+* updating git-lfs on travis to v1.1.2
+* another approach to install `git-lfs` on travis
+* try installing `git-lfs` without an APT Repository
+* removed `git-lfs` from apt-packages
+* hope apt-packages find `git-lfsOH#`
+* try pulling `lfs` files
+* install git-lfs to download big-files from text-pointers
+* better visualization
+* added Tokenizer and Tagger usage instructions
+* pos-tag model for Hindi
+* Hindi suffix embedding (created using Gensim)
+* Hindi prefix embedding (created using Gensim)
+* Multi-Layer-Perceptron
+* word2vec embedder for pos-tagger
+* wx-converter for Indic scripts (Models are trained in WX)
+* added pos-tagger for Hindi
+* added `numpy` to requirements
+* merged `indic-tokenizer` and `roman-tokenizer` into `tokenizer`
+* track files patterns are preserved at git clone
+* word-vec embedding for Hindi (created using Gensim)
+* use pbr for setup
+* Added travis and circle-ci integration
+* Added tokenizer for all Indian Languages including Urdu, Kashmiri and English
+* initialized module
+* initialized module
+* Initial commit
