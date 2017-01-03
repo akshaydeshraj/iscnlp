@@ -16,10 +16,10 @@ class BaseTokenizer(object):
         with open('%s/data/DOMAINS' % file_path, encoding='utf-8') as fp:
             self.domains = fp.read().split()
         # List of Emoticons
-        with open('%s/data/EMOTICONS' % file_path) as fp:
+        with open('%s/data/EMOTICONS' % file_path, encoding='utf-8') as fp:
             self.emoticons = set(fp.read().split())
         # List of Non-breaking Prefixes
-        with open('%s/data/NONBREAKING_PREFIXES' % file_path) as fp:
+        with open('%s/data/NONBREAKING_PREFIXES' % file_path, encoding='utf-8') as fp:
             self.NBP = set(fp.read().split())
         self.NBP = self.NBP.union(set(string.ascii_letters[:26]))
         self.NBP_NUM = set(['No', 'no', 'Art', 'pp'])
